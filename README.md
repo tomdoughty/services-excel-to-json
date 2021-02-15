@@ -5,7 +5,7 @@ Every row of `data.xlsx` is mapped into a Service object based on the following 
 | Header | Type    | Description                             | Required | Default                                  |
 | -------|-------- | --------------------------------------- | -------- | ---------------------------------------- |
 | Name   | string  | Name of service                         | true     | N/A                                      |
-| Slug   | string  | URL slug                                | false    | Hyphen separated Name                    |
+| Slug   | string  | URL slug for service finder             | false    | Hyphen separated Name                    |
 | Query  | string  | OData query for NHS Service Search API  | false    | ServicesProvided/any (x: x eq '${Name}') |
 
 
