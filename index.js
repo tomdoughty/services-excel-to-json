@@ -3,8 +3,10 @@ const fs = require('fs');
 const XLSX = require('xlsx');
 
 class Service {
-  constructor({ Name, Slug, Query }) {
+  constructor({ Name, Title, Redirect, Slug, Query }) {
     this.Name = Name;
+    this.Title = Title || Name;
+    this.Redirect = Redirect;
     this.Slug = Slug || this.slugify(Name);
     this.Query = Query || this.querify(Name);
   }
