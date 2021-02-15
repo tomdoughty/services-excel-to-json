@@ -24,4 +24,4 @@ class Service {
 const wb = XLSX.readFile('data.xlsx');
 const services = XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]]);
 const serviceClasses = services.map((service) => new Service(service));
-fs.writeFileSync('data.json', JSON.stringify(serviceClasses));
+fs.writeFileSync('data.json', JSON.stringify({ value: serviceClasses }));
