@@ -6,7 +6,7 @@ class Service {
   constructor({ Name, Title, Redirect, Slug, Query }) {
     this.Name = Name;
     this.Title = Title || Name;
-    this.Redirect = Redirect;
+    this.Redirect = Redirect || null;
     this.Slug = Slug || this.slugify(Name);
     this.Query = Query || this.querify(Name);
   }
